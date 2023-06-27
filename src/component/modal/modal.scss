@@ -1,0 +1,245 @@
+.modall {
+    .modalOut {
+        position: fixed;
+        z-index: 95;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        top: 0;
+        left: 0;
+        transform: translateY(-180%);
+        transition: all 0.5s;
+
+        .blur {
+            width: 100%;
+            height: 100vh;
+            backdrop-filter: blur(2px);
+            position: absolute;
+        }
+
+        .modalBox {
+            position: relative;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: auto;
+            padding: 25px;
+            -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+            box-shadow: 4px 4px 10px 1px rgba(169, 168, 168, 0.47);
+
+            .modalContainer {
+                margin-bottom: 40px;
+
+                .top {
+                    display: flex;
+                    justify-content: space-between;
+                    height: 160px;
+
+                    h3 {
+                        height: max-content;
+                        width: 50%;
+                        text-align: center;
+                        color: #114b5c;
+                    }
+
+                    img {
+                        height: 100%;
+                    }
+                }
+
+                .flexBoxs {
+
+                    .flexBox {
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: 10px 0px;
+
+                        .head {
+                            flex: 2;
+                        }
+
+                        .text {
+                            flex: 3;
+                        }
+
+                        .right {
+                            flex: 1;
+
+                            button {
+                                cursor: pointer;
+                                border: 0.5px solid lightgray;
+                                padding: 4px 8px;
+                                text-decoration: none;
+                                color: #114b5c;
+                            }
+                        }
+                    }
+
+                    .flexBox2 {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .leftHead {
+                            flex: 1;
+                            padding: 5px 0px;
+                        }
+
+                        .rightName {
+                            flex: 2;
+
+                            .text2 {
+                                position: relative;
+                                display: flex;
+                                margin-top: 4px;
+                                gap: 4px;
+                                width: max-content;
+                                z-index: 100;
+                                cursor: pointer;
+
+                                .openLeftModal {
+                                    position: absolute;
+                                    transition: .10s all;
+                                    left: 100%;
+                                    top: 0;
+                                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.469);
+                                    background-color: #fff;
+                                    z-index: 100;
+                                    width: max-content;                                   
+                                 
+
+                                    .modalKey {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        gap: 32px;
+                                        margin-bottom: 8px;
+                                        margin: 8px;
+
+                                        .openHoverBox {
+
+                                            .flexbox {
+                                                display: flex;
+                                                gap: 16px;
+                                                cursor: pointer;
+                                            }
+
+                                            .flexbox:hover{
+                                               color: #3c67ac;
+                                            }
+
+                                            .hoveredText {
+                                                display: none;
+                                                position: absolute;
+                                                top: 0;
+                                                left: 100%;
+                                                width: 250px;
+                                                padding: 8px;
+                                                background-color: #fff;
+                                                box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+
+                                                .flexText {
+                                                    display: flex;
+                                                    justify-content: space-between;
+                                                    margin-bottom: 4px;
+                                                }
+                                            }
+
+                                        }
+
+                                        .openHoverBox:hover .hoveredText {
+                                            display: block;
+                                        }
+
+                                        .right {
+                                            button {
+                                                cursor: pointer;
+                                                border: 0.5px solid lightgray;
+                                                padding: 4px 8px;
+                                                text-decoration: none;
+                                                color: #114b5c;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .bottom{
+                display: flex;
+                gap: 24px;
+
+                .addd{
+                    flex: 1;
+                    padding: 10px 0px 13px 0px;
+                    margin: auto;
+                    text-align: center;
+                    box-shadow: 4px 4px 10px 1px rgba(169, 168, 168, 0.47);
+                    background-color:#008000;
+                    color: #fff;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+
+                .addd:hover{
+                    box-shadow: 2px 4px 5px 1px rgba(130, 128, 128, 0.58);
+                    color: #dcd9d9;
+                }
+
+
+                .out {
+                    flex: 1;
+                    border-left: 3px solid #114b5c;
+                    border-right: 3px solid #114b5c;
+                    border-bottom: 3px solid #114b5c;
+                    background-color: #bbdae355;
+                    padding: 10px 0px;
+                    margin: auto;
+                    text-align: center;
+                    box-shadow: 4px 4px 10px 1px rgba(169, 168, 168, 0.47);
+                    cursor: pointer;
+                }
+    
+                .out:hover {
+                    box-shadow: 2px 4px 5px 1px rgba(130, 128, 128, 0.58);
+                    color: #5d5d5d;
+                }
+            }
+
+            .add-new{
+                margin-top: 14px;
+                color: #3c67ac;
+                display: flex;
+                width: max-content;
+                cursor: pointer;
+                border-bottom: 0.5px solid #3c67ac;
+                -webkit-mask:
+                conic-gradient(from 180deg at top 8px right 8px, #0000 90deg, #000 0) var(--_i, 200%) 0 /200% var(--_i, 8px) border-box no-repeat,
+                conic-gradient(at bottom 8px left 8px, #0000 90deg, #000 0) 0 var(--_i, 200%)/var(--_i, 8px) 200% border-box no-repeat,
+                linear-gradient(#000 0 0) padding-box no-repeat;
+                transition: .3s, -webkit-mask-position .3s .3s;
+
+                .arrowRight{
+                    margin-top: 1px;
+                }
+            }
+
+            
+            .add-new:hover,
+            .add-new:focus {
+            --_i: 100%;
+            transition: .3s, -webkit-mask-size .3s .3s;
+
+        }
+        }
+    }
+
+    .modalOut.active {
+        transform: translateY(0);
+    }
+}
+
+@media(max-width: 1250px) {}

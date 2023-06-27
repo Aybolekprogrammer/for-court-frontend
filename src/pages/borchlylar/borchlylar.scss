@@ -1,0 +1,244 @@
+.borchMain{
+    width: 100%;
+
+    .borchMainContainer{
+        margin: 0 60px;
+
+        h2{
+            // color: rgb(122, 122, 236);
+        }
+        .topSearch {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            .header-search {
+                width: 550px;
+
+                .form {
+                    position: relative;
+                    width: 100%;
+
+                    input {
+                        width: 100%;
+                        font-size: 1em;
+                        padding: 0.5em;
+                        color: #999;
+                        outline: none;
+                        border: 0.5px solid #155e75;
+                        background: none;
+                        -webkit-appearance: none;
+                        transition: 0.5s all;
+                        -webkit-transition: 0.5s all;
+                        -moz-transition: 0.5s all;
+                    }
+
+                    .btn-default {
+                        border: none;
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        top: 0px;
+                        right: 0px;
+                        width: 100px;
+                        height: 100%;
+                        outline: none;
+                        box-shadow: none;
+                        background: #155e75;
+                        color: #fff;
+                        padding: 0 7px;
+                        -webkit-appearance: none;
+                        -webkit-transition: .5s all;
+                        -moz-transition: .5s all;
+                        transition: .5s all;
+                    }
+
+                    .searchIcon {
+                        font-size: 1.7em;
+                        color: #fff;
+                        padding: 3px;
+                    }
+                }
+            }
+
+            .dataFilter {
+                width: max-content;
+
+                .filterBox {
+                    margin: 10px 0;
+                    position: relative;
+
+                    .filterTop {
+                        box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+                        padding: 7px 50px;
+                        background-color: #fff;
+                        color: #155e75;
+                        transition: 3s;
+                        cursor: pointer;
+                    }
+
+                        .filterList {
+                            position: absolute;
+                            z-index: 5;
+                            background-color: white;
+                            box-shadow: 1px 4px 5px rgba(0, 0, 0, .2);
+                            border: 0.5px solid lightgray;
+                            width: 130%;
+                            padding: 10px;
+                            transition: .5s all;
+                            right: 0;
+                            border-radius: 8px 0px 8px 8px;
+    
+                            .list {
+                                list-style-type: none;
+                                margin: 10px 8px;
+                                border-bottom: 0.5px solid lightgray;
+                                cursor: pointer;
+                                transition: .5s all;
+    
+                                .input {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+    
+                                    .searchMainName {
+                                        margin-bottom: 4px;
+                                        cursor: pointer;
+                                    }
+                                }
+    
+                                .output {
+                                    background-color: #fdfcfccf;
+                                    border: 0.5px solid lightgray;
+                                    border-radius: 7px;
+                                    padding: 5px 0px;
+                                    transition: .5s all;
+    
+                                    .listContent {
+                                        list-style: none;
+                                        padding: 4px 0px 0px 4px;
+                                        cursor: pointer;
+                                        transition: .5s all;
+    
+                                        .listName {
+                                            width: 90%;
+                                            cursor: pointer;
+    
+                                            span {
+                                                color: rgb(75, 123, 155);
+                                            }
+    
+                                            .listPlaceName {
+                                                display: flex;
+                                                justify-content: space-between;
+                                                padding: 0px 4px;
+                                                border-bottom: 0.5 px solid lightgray;
+                                            }
+    
+                                            .li {
+                                                cursor: pointer;
+                                                display: none;
+                                                width: 100%;
+                                                margin-left: 8px;
+                                                font-family: 'Times New Roman', Times, serif;
+                                            }
+    
+                                            .li:hover {
+                                                color: blue;
+                                            }
+                                        }
+    
+                                        .listName:hover .li {
+                                            display: block;
+                                            transition: .10s all;
+                                        }
+                                    }
+                                    .rulingLists {
+                                        padding: 4px 0px 0px 4px;
+    
+                                        .rulingList {
+                                            padding: 4px 0px 0px 0px;
+                                            font-size: 14px;
+                                            cursor: pointer;
+                                            color: rgb(75, 123, 155);
+                                            transition: .5s all;
+                                        }
+                                    }
+                                }
+
+                                .form-group{
+                                    display: flex;
+                                    margin: 8px 0px;
+                                    border: 0.5px solid rgb(232, 232, 232);
+
+                                    input{
+                                        width: 84%;
+                                        outline: none;
+                                        border: none;
+                                        padding: 0 0 0 4px;
+                                    }
+
+                                    .serachIconForFilter{
+                                        width: 16%;
+                                        color: #fff;
+                                        background-color: lightgray;
+                                    }
+                                }
+
+                                
+                            input {
+                                width: 100%;
+                                outline: none;
+                                border: none;
+                                margin: 8px 4px 0px 0px;
+                            }
+
+                            input[type=date]::before {
+                                content: attr(placeholder);
+                                position: absolute;
+                                color: #999999;
+                            }
+
+                            input[type=date] {
+                                color: #ffffff;
+                            }
+
+                            input[type=date]:focus,
+                            input[type=date]:valid {
+                                color: #666666;
+                            }
+
+                            input[type=date]:focus::before,
+                            input[type=date]:valid::before {
+                                content: "";
+                            }
+                            }
+    
+                            .clearButton{
+                                margin: 16px 8px 8px 8px;
+                                text-align: center;
+                            
+                                button{
+                                    margin: auto;
+                                    border: none;
+                                    padding: 4px 16px;
+                                    background-color: #185adb;
+                                    color: #fff;
+                                    font-family:Verdana, Geneva, Tahoma, sans-serif;
+                                    cursor: pointer;
+                                    box-shadow: 0px 15px 20px rgba(150, 151, 171, 0.4);
+                                }
+    
+                                button:hover{
+                                    box-shadow: 0px 8px 15px rgba(46, 46, 46, 0.333);
+                                }
+                            }
+                        }
+                }
+            }
+        }
+    }
+}
